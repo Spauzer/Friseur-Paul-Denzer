@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Denzer - Dein Friseur</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Paul Denzer - Hair & Style</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#services">Leistungen</a></li>
+                <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#booking">Termin buchen</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Willkommen bei Paul Denzer</h1>
+        <p>Dein Friseur für Style, Eleganz und Persönlichkeit!</p>
+        <a href="#booking" class="cta-button">Jetzt Termin buchen</a>
+    </section>
+
+    <section id="about">
+        <h2>Über uns</h2>
+        <p>Mit über 10 Jahren Erfahrung bieten wir professionelle Haarschnitte, kreative Stylings und exzellenten Service.</p>
+    </section>
+
+    <section id="services">
+        <h2>Leistungen</h2>
+        <ul>
+            <li>Herren- und Damenhaarschnitte</li>
+            <li>Balayage, Strähnchen, Coloration</li>
+            <li>Styling für besondere Anlässe</li>
+            <li>Bartpflege und Rasuren</li>
+        </ul>
+    </section>
+
+    <section id="gallery">
+        <h2>Galerie</h2>
+        <div class="gallery-grid">
+            <img src="image1.jpg" alt="Frisur 1">
+            <img src="image2.jpg" alt="Frisur 2">
+            <img src="image3.jpg" alt="Frisur 3">
+        </div>
+    </section>
+
+    <section id="booking">
+        <h2>Termin buchen</h2>
+        <form id="booking-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Telefonnummer:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="date">Datum:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Uhrzeit:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="service">Leistung:</label>
+            <select id="service" name="service" required>
+                <option value="haircut">Haarschnitt</option>
+                <option value="coloring">Coloration</option>
+                <option value="styling">Styling</option>
+                <option value="beard">Bartpflege</option>
+            </select>
+
+            <label for="notes">Notizen:</label>
+            <textarea id="notes" name="notes"></textarea>
+
+            <button type="submit">Termin anfragen</button>
+        </form>
+        <p id="booking-response"></p>
+    </section>
+
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <p>Adresse: [Straße, Stadt]</p>
+        <p>Telefon: [Telefonnummer]</p>
+        <p>E-Mail: [E-Mail-Adresse]</p>
+        <p>Öffnungszeiten: Montag–Freitag 9–18 Uhr, Samstag 10–14 Uhr</p>
+    </section>
+
+    <footer>
+        <p>© 2024 Paul Denzer. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
