@@ -6,6 +6,7 @@
     <title>Paul Denzer - Dein Friseur</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
     <header>
@@ -13,7 +14,10 @@
             <i class="fas fa-cut"></i>
             <span>Paul Denzer</span>
         </div>
-        <nav>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav-menu">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">Über uns</a></li>
@@ -170,5 +174,65 @@
             <p>© 2024 Paul Denzer. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+            // Close menu when clicking a link
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    document.querySelector('.nav-menu').classList.remove('active');
+                });
+            });
+        });
+
+        // Easter egg: Confetti on 5 clicks
+        const images = document.querySelectorAll('.about-image');
+        images.forEach(img => {
+            let clickCount = 0;
+            let lastClick = 0;
+            
+            img.addEventListener('click', () => {
+                const now = Date.now();
+                if (now - lastClick > 3000) { // Reset after 3 seconds of inactivity
+                    clickCount = 0;
+                }
+                lastClick = now;
+                
+                clickCount++;
+                if (clickCount === 5) {
+                    // Reset counter
+                    clickCount = 0;
+                    
+                    // Trigger confetti
+                    const end = Date.now() + 3000; // 3 seconds duration
+                    
+                    // Confetti animation
+                    const colors = ['#e74c3c', '#2c3e50', '#34495e'];
+                    
+                    (function frame() {
+                        confetti({
+                            particleCount: 3,
+                            angle: 60,
+                            spread: 55,
+                            origin: { x: 0 },
+                            colors: colors
+                        });
+                        confetti({
+                            particleCount: 3,
+                            angle: 120,
+                            spread: 55,
+                            origin: { x: 1 },
+                            colors: colors
+                        });
+                        
+                        if (Date.now() < end) {
+                            requestAnimationFrame(frame);
+                        }
+                    }());
+                }
+            });
+        });
+    </script>
 </body>
 </html>
