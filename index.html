@@ -5,95 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paul Denzer - Dein Friseur</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <div class="logo">Paul Denzer - Hair & Style</div>
+        <div class="logo">
+            <i class="fas fa-cut"></i>
+            <span>Paul Denzer</span>
+        </div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">Über uns</a></li>
                 <li><a href="#services">Leistungen</a></li>
-                <li><a href="#gallery">Galerie</a></li>
                 <li><a href="#booking">Termin buchen</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home">
-        <h1>Willkommen bei Paul Denzer</h1>
-        <p>Dein Friseur für Style, Eleganz und Persönlichkeit!</p>
-        <a href="#booking" class="cta-button">Jetzt Termin buchen</a>
-    </section>
-
-    <section id="about">
-        <h2>Über uns</h2>
-        <p>Mit über 10 Jahren Erfahrung bieten wir professionelle Haarschnitte, kreative Stylings und exzellenten Service.</p>
-    </section>
-
-    <section id="services">
-        <h2>Leistungen</h2>
-        <ul>
-            <li>Herren- und Damenhaarschnitte</li>
-            <li>Balayage, Strähnchen, Coloration</li>
-            <li>Styling für besondere Anlässe</li>
-            <li>Bartpflege und Rasuren</li>
-        </ul>
-    </section>
-
-    <section id="gallery">
-        <h2>Galerie</h2>
-        <div class="gallery-grid">
-            <img src="image1.jpg" alt="Frisur 1">
-            <img src="image2.jpg" alt="Frisur 2">
-            <img src="image3.jpg" alt="Frisur 3">
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Willkommen bei Paul Denzer</h1>
+            <p class="tagline">Ihr Friseur für Style, Eleganz und Persönlichkeit</p>
+            <a href="#booking" class="cta-button">Termin buchen</a>
         </div>
     </section>
 
-    <section id="booking">
-        <h2>Termin buchen</h2>
-        <form id="booking-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="phone">Telefonnummer:</label>
-            <input type="tel" id="phone" name="phone" required>
-
-            <label for="date">Datum:</label>
-            <input type="date" id="date" name="date" required>
-
-            <label for="time">Uhrzeit:</label>
-            <input type="time" id="time" name="time" required>
-
-            <label for="service">Leistung:</label>
-            <select id="service" name="service" required>
-                <option value="haircut">Haarschnitt</option>
-                <option value="coloring">Coloration</option>
-                <option value="styling">Styling</option>
-                <option value="beard">Bartpflege</option>
-            </select>
-
-            <label for="notes">Notizen:</label>
-            <textarea id="notes" name="notes"></textarea>
-
-            <button type="submit">Termin anfragen</button>
-        </form>
-        <p id="booking-response"></p>
+    <section id="about" class="section-light">
+        <div class="container">
+            <h2>Über uns</h2>
+            <div class="about-content">
+                <div class="about-images">
+                    <img src="paul.jpg" alt="Paul Denzer im Salon" class="about-image">
+                    <img src="paul2.jpg" alt="Paul Denzer bei der Arbeit" class="about-image">
+                </div>
+                <p>Mit über 10 Jahren Erfahrung bieten wir professionelle Haarschnitte, kreative Stylings und exzellenten Service. Unser Ziel ist es, Ihre natürliche Schönheit zu unterstreichen und Ihnen ein Styling zu geben, das zu Ihrem Lebensstil passt.</p>
+                <div class="experience-highlights">
+                    <div class="highlight">
+                        <i class="fas fa-star"></i>
+                        <h3>10+ Jahre</h3>
+                        <p>Erfahrung</p>
+                    </div>
+                    <div class="highlight">
+                        <i class="fas fa-heart"></i>
+                        <h3>1000+</h3>
+                        <p>Zufriedene Kunden</p>
+                    </div>
+                    <div class="highlight">
+                        <i class="fas fa-award"></i>
+                        <h3>Premium</h3>
+                        <p>Service</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Kontakt</h2>
-        <p>Adresse: [Straße, Stadt]</p>
-        <p>Telefon: [Telefonnummer]</p>
-        <p>E-Mail: [E-Mail-Adresse]</p>
-        <p>Öffnungszeiten: Montag–Freitag 9–18 Uhr, Samstag 10–14 Uhr</p>
+    <section class="section-dark reviews">
+        <div class="container">
+            <h2>Das sagen unsere Kunden</h2>
+            <div class="review-grid">
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Absolut professioneller Service! Paul versteht es perfekt, auf die individuellen Wünsche einzugehen und berät kompetent. Der beste Friseur, bei dem ich je war - jedes Mal ein perfektes Ergebnis!"</p>
+                    <div class="review-author">
+                        <i class="fas fa-user-circle"></i>
+                        <p>Leon R.</p>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Der absolute Mullet-Experte! Paul hat mir den perfekten Business-in-the-Front, Party-in-the-Back Look verpasst. Endlich ein Friseur, der versteht wie man einen modernen Vokuhila stylt. Kann ich nur empfehlen!"</p>
+                    <div class="review-author">
+                        <i class="fas fa-user-circle"></i>
+                        <p>Max K.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-dark">
+        <div class="container">
+            <h2>Unsere Leistungen</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-cut"></i>
+                    <h3>Haarschnitte</h3>
+                    <p>Professionelle Schnitte für Damen und Herren</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Coloration</h3>
+                    <p>Balayage, Strähnchen, Komplett-Färbung</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-magic"></i>
+                    <h3>Styling</h3>
+                    <p>Kreative Styles für besondere Anlässe</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Bartpflege</h3>
+                    <p>Professionelle Bartpflege und Rasuren</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="section-light">
+        <div class="container">
+            <h2>Termin buchen</h2>
+            <p class="booking-info">Für eine Terminvereinbarung kontaktieren Sie uns bitte telefonisch oder per E-Mail.</p>
+            <div class="contact-buttons">
+                <a href="tel:+49123456789" class="contact-button"><i class="fas fa-phone"></i> Anrufen</a>
+                <a href="mailto:termin@paul-denzer.de" class="contact-button"><i class="fas fa-envelope"></i> E-Mail senden</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-dark">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Adresse</h3>
+                    <p>Hauptstraße 26<br>67305 Ramsen</p>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-phone"></i>
+                    <h3>Telefon</h3>
+                    <p><a href="tel:+49123456789">+49 (0) 123 456789</a></p>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <h3>E-Mail</h3>
+                    <p><a href="mailto:info@paul-denzer.de">info@paul-denzer.de</a></p>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-clock"></i>
+                    <h3>Öffnungszeiten</h3>
+                    <p>Mo–Fr: 9–18 Uhr<br>Sa: 10–14 Uhr</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>© 2024 Paul Denzer. Alle Rechte vorbehalten.</p>
+        <div class="container">
+            <p>© 2024 Paul Denzer. Alle Rechte vorbehalten.</p>
+        </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
